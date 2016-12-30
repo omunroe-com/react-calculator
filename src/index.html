@@ -60,7 +60,6 @@
         * {
             box-sizing: border-box;
         }
-
         button {
             font-family: inherit;
         }
@@ -73,22 +72,21 @@
             transform: translateX(-50%) translateY(-50%);
         }
     </style>
-    <script>
-        (function () {
-            if ('serviceWorker' in navigator) {
-                window.onload = () => {
-                    navigator.serviceWorker.register('/calc-service-worker.js');
-                }
-
+<script>
+    (function () {
+        if ('serviceWorker' in navigator) {
+            window.onload = function () {
+                navigator.serviceWorker.register('/calc-service-worker.js');
             }
-        })();
-    </script>
+        }
+    })();
+</script>
 </head>
 
 <body>
     <div id="app">
         <h3 class="loader">almost there, hang on...</h3>
-</div>
+    </div>
 </body>
 
 </html>
