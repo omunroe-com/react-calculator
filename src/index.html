@@ -47,11 +47,36 @@
 	<meta itemprop="description" content="React+Redux Calculator">
 	<meta itemprop="image" content="https://dl.dropboxusercontent.com/u/4633623/calcgoogleplus.png">
     <title>Calculator</title>
+    <style>
+        body {
+            background-color: #3858c5;
+            background-position: top center;
+            background-repeat: no-repeat;
+            font-family: 'rounded_eleganceregular', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            text-rendering: optimizeLegibility;
+        }
+        * {
+            box-sizing: border-box;
+        }
+        button {
+            font-family: inherit;
+        }
+        .loader {
+            color: #fff;
+            display: block;
+            left: 50%;
+            position: absolute;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+        }
+    </style>
     <script>
         (function () {
             if ('serviceWorker' in navigator) {
-                navigator.serviceWorker.register('/calc-service-worker.js');
-
+                window.onload = () => {
+                    navigator.serviceWorker.register('/calc-service-worker.js');
+                }
             }
         })();
     </script>
@@ -59,6 +84,7 @@
 
 <body>
     <div id="app">
+        <h3 class="loader">almost there, hang on...</h3>
     </div>
 </body>
 
