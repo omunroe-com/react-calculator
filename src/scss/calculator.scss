@@ -17,8 +17,9 @@
         align-content: flex-start;
         background-color: rgba(51, 51, 51, 1);
         display: flex;
-        flex-basis: 77%;
+        flex-basis: 62%;
         flex-direction: row;
+        flex-shrink: 0;
         flex-wrap: wrap;
     }
 
